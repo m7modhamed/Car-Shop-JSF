@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+  <style>
+        .a {
+            text-decoration: none;
+        }
+        body {
+            background-color: #eaecee;
+        }
+        .card {
+            transition: 0.9s;
+        }
+        .card:hover {
+            transform: scale(1.04);
+        }
+    </style>
+	<link value="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+	 <style>
+	    body{
+	      background-color: #eaecee;
+	    }
+	  </style>
+	<title>Manage Truck</title>
+</h:head>
+
+<h:body>
+<ui:include src="../navBar.xhtml"></ui:include>
+
+
+	<div class="container-fluid text-center mt-5">
+<h:form>
+    <div class="row justify-content-center">
+
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+            <h:outputLink styleClass= "a" value="#{request.contextPath}/truck/addTruck.xhtml">
+                <div class="card text-bg-secondary">
+                    <div class="card-header">Add New Truck</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Add a New Truck</h5>
+                        <p class="card-text">Expand your store inventory by adding new trucks.</p>
+                    </div>
+                </div>
+            </h:outputLink>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+            <h:outputLink styleClass= "a" value="#{request.contextPath}/truck/getTruck.xhtml">
+                <div class="card text-bg-secondary">
+                    <div class="card-header">Truck Details</div>
+                    <div class="card-body">
+                        <h5 class="card-title">View Truck</h5>
+                        <p class="card-text">View details and specifications for a truck in your store.</p>
+                    </div>
+                </div>
+            </h:outputLink>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+            <h:outputLink styleClass= "a" value="#{request.contextPath}/truck/updateTruck.xhtml">
+                <div class="card text-bg-secondary">
+                    <div class="card-header">Update Truck</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Update Truck</h5>
+                        <p class="card-text">Modify the details and specifications of a truck in your store.</p>
+                    </div>
+                </div>
+            </h:outputLink>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+            <h:outputLink styleClass= "a" value="#{request.contextPath}/truck/deleteTruck.xhtml">
+                <div class="card text-bg-secondary">
+                    <div class="card-header">Delete Truck</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Delete Truck</h5>
+                        <p class="card-text">Remove a truck from your store inventory permanently.</p>
+                    </div>
+                </div>
+            </h:outputLink>
+        </div>
+        
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+            <h:outputLink styleClass= "a"  value="#{request.contextPath}/truck/getAllTrucks.xhtml">
+                <div class="card text-bg-secondary">
+                    <div class="card-header">View All Trucks</div>
+                    <div class="card-body">
+                        <h5 class="card-title">All Trucks</h5>
+                        <p class="card-text">View a comprehensive list of all trucks in your store inventory.</p>
+                    </div>
+                </div>
+            </h:outputLink>
+        </div>
+		
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+            <h:outputLink styleClass= "a" value="#{request.contextPath}/truck/checkPayloadOverloaded.xhtml">
+                 <div class="card text-bg-secondary">
+                    <div class="card-header">Check Payload Status</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Payload Overload Check</h5>
+                        <p class="card-text">Verify if the payload of a vehicle exceeds the allowable limit and ensure safety compliance.</p>
+                    </div>
+                </div>
+            </h:outputLink>
+        </div>
+
+    </div>
+</h:form>
+</div>
+
+</h:body>
+</html>
